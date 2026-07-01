@@ -1,4 +1,14 @@
 module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/js/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+    ]
+  },
   rewrites() {
     return [
       {
